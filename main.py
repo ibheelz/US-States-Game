@@ -10,4 +10,6 @@ turtle.shape(image)
 
 answer = screen.textinput(title="Guess the State", prompt="What's another state's name?")
 
-turtle.mainloop()
+turtle.mainloop() 
+
+Bass = 12
