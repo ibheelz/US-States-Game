@@ -17,7 +17,7 @@ while len(guessed_state) < 50:
     answer = turtle.textinput(title= f"{len(guessed_state)}/50 States Guessed", prompt= "Guess the state").title()
     if answer == "Exit":
         break
-    if answer in states:
+    if answer in states and answer not in guessed_state:
         guessed_state.append(answer)
         t = turtle.Turtle()
         t.penup()
@@ -25,3 +25,4 @@ while len(guessed_state) < 50:
         state_info = data[answer == data.state]
         t.goto(int(state_info.x), int(state_info.y))
         t.write(answer)
+
